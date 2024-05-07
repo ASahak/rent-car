@@ -1,0 +1,87 @@
+import {defineStyleConfig} from '@chakra-ui/react'
+
+export default defineStyleConfig({
+  baseStyle: {
+    fontFamily: 'inherit',
+    wordBreak: 'break-all'
+  },
+  sizes: {
+    md: {
+      fontSize: '1.2rem',
+      fontWeight: 500,
+      lineHeight: '1.6rem',
+    }
+  },
+  variants: {
+    'pill-success': {
+      gap: 2,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '2.9rem',
+      padding: '0 0.8rem',
+      borderRadius: '0.6rem',
+      boxShadow: '0 0 0 0.1rem var(--chakra-colors-green-200) inset',
+      backgroundColor: 'green.100',
+      color: 'green.500',
+      textTransform: 'capitalize',
+      fontSize: '1.2rem',
+      fontWeight: 500,
+      lineHeight: '1.6rem',
+    },
+    'pill-failed': {
+      gap: 2,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '2.9rem',
+      padding: '0 0.8rem',
+      borderRadius: '0.6rem',
+      boxShadow: '0 0 0 0.1rem var(--chakra-colors-red-200) inset',
+      backgroundColor: 'red.100',
+      color: 'red.500',
+      textTransform: 'capitalize',
+      fontSize: '1.2rem',
+      fontWeight: 500,
+      lineHeight: '1.6rem',
+    },
+    'gray-outline-filled': ({ colorMode }) => ({
+      boxShadow: colorMode === 'dark' ? '0 0 0 0.1rem var(--chakra-colors-gray-400) inset' : '0 0 0 0.1rem var(--chakra-colors-gray-150) inset',
+      backgroundColor: colorMode === 'dark' ? 'darcula.400' : 'gray.50',
+      color: colorMode === 'dark' ? 'gray.100' : 'black',
+      padding: '0.5rem 0.8rem',
+      borderRadius: '0.6rem',
+      textTransform: 'capitalize',
+      fontSize: '1.2rem',
+      fontWeight: 500,
+    }),
+    'pill-gray-filled': ({ colorMode }) => ({
+      backgroundColor: colorMode === 'dark' ? 'darcula.400' : 'gray.100',
+      color: colorMode === 'dark' ? 'gray.100' : 'gray.800',
+      padding: '0.3rem 0.8rem',
+      borderRadius: '0.6rem',
+      textTransform: 'capitalize',
+      fontSize: '1.4rem',
+      fontWeight: 400,
+      lineHeight: '2.3rem',
+    }),
+    'pill-unstyled': ({ colorMode }) => ({
+      color: colorMode === 'dark' ? 'white' : 'gray.400',
+      textTransform: 'capitalize',
+      fontSize: '1.4rem',
+      fontWeight: 'normal',
+    }),
+    'pill-docs': ({ colorMode }) => ({
+      backgroundColor: colorMode === 'dark' ? 'darcula.400' : 'gray.50',
+      color: colorMode === 'dark' ? 'gray.100' : 'gray.800',
+      padding: '0.1rem 0.8rem',
+      borderRadius: '0.6rem',
+      fontFamily: 'gitbook-code-font, Menlo, monospace',
+      fontWeight: 400,
+      textTransform: 'initial',
+      fontSize: '1.4rem',
+      lineHeight: 'normal',
+    }),
+  },
+  defaultProps: {},
+})
