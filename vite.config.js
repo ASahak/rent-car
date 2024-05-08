@@ -16,7 +16,7 @@ export default defineConfig({
     include: ['react/jsx-runtime'],
   },
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     assetsDir: 'static',
   },
   resolve: {
