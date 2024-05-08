@@ -8,8 +8,13 @@ export default {
       }
     },
     'body': {
-      background: 'gray.30',
+      background: 'black',
       transition: '0s'
+    },
+    'body.freeze-body': {
+      position: 'fixed',
+      width: '100%',
+      height: '100%',
     },
     'body, *': {
       fontFamily: 'Poppins,sans-serif;',

@@ -4,7 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, Route } from 'react-rout
 import App from '@/App';
 import Layouts from '@/components/layouts';
 import ROUTER_PATHS from '@/constants/route-paths';
-import { LAYOUTS } from '../constants/layouts';
+import { LAYOUTS } from '@/constants/layouts';
 const Home = lazy(() => import('@/pages/home'));
 
 export const routes = [

@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e41f7bb-d925-4c80-9754-0e8e79d5240e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/vue.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/InputText.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/base.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/base.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/route-paths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/route-paths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/router.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/foundations/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/foundations/colors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +31,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2g9eoVnoH5BcBHUMPYKXEpW3ikc" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -46,20 +46,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/pages",
+    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/containers/home",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\containers\home" />
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\components" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\pages" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\constants" />
-      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\components" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -74,7 +76,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715114397363</updated>
-      <workItem from="1715114399693" duration="1757000" />
+      <workItem from="1715114399693" duration="1861000" />
+      <workItem from="1715190254197" duration="13167000" />
     </task>
     <servers />
   </component>
