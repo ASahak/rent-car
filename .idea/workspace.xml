@@ -6,16 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="8e41f7bb-d925-4c80-9754-0e8e79d5240e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/home/car-brands.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/home/car-brands.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/home/how-it-works.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/home/how-it-works.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useMakeFixedBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useMakeFixedBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/phone/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/phone/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/globalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/utils",
+    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,7 +80,8 @@
       <updated>1715114397363</updated>
       <workItem from="1715114399693" duration="1861000" />
       <workItem from="1715190254197" duration="13579000" />
-      <workItem from="1715244255864" duration="8897000" />
+      <workItem from="1715244255864" duration="9180000" />
+      <workItem from="1715281188529" duration="5167000" />
     </task>
     <servers />
   </component>

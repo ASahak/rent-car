@@ -1,5 +1,6 @@
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
+import 'react-datepicker/dist/react-datepicker.css';
 import { AppProviders } from '@/providers/app';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';

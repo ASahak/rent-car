@@ -7,7 +7,28 @@ export default defineStyleConfig({
   },
   sizes: {},
   variants: {
-    'brand': ({ colorMode }) => ({
+    'select': () => ({
+      padding: '1.3rem',
+      borderRadius: '0.6rem',
+      textAlign: 'left',
+      bgColor: 'black',
+      height: '4.4rem',
+      color: 'white',
+      fontWeight: 500,
+      border: '1px solid white',
+      fontSize: '1.2rem',
+    }),
+    'dropdown-item': () => ({
+      display: 'inline-block !important',
+      minH: '3.4rem',
+      color: 'white',
+      fontWeight: '500',
+      fontSize: '1.4rem',
+      textAlign: 'left',
+      _hover: { bgColor: 'gray.50' },
+      _focus: { bgColor: 'gray.50' },
+    }),
+    'brand': () => ({
       appearance: 'none',
       display: 'flex',
       alignItems: 'center',

@@ -60,5 +60,36 @@ export default {
         backgroundColor: 'gray.100',
       },
     },
+    '.button-as-select[aria-expanded="true"]': {
+      borderColor: 'brand.500'
+    },
+    /*DATEPICKER overrides*/
+    '.react-datepicker-wrapper': {
+      display: 'block',
+      width: '100%',
+    },
+    '.react-datepicker__input-container .react-datepicker__calendar-icon': {
+      fill: 'white',
+      zIndex: '22',
+      fontSize: '1.4rem',
+      right: '5px',
+      bottom: 0,
+      top: 0,
+      margin: 'auto'
+    },
+    '.react-datepicker__view-calendar-icon input': {
+      padding: '6px 25px 5px 10px'
+    },
+    '.react-datepicker': {
+      fontSize: '1.2rem',
+    },
+    '.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header': {
+      fontSize: '1.3rem',
+      lineHeight: '2rem',
+    },
+    '.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name': {
+      width: '2.4rem',
+      lineHeight: '2.4rem',
+    }
   })
 };

@@ -3,7 +3,7 @@ import { Flex, Image, Container, List, ListItem, Icon, useDisclosure, Button } f
 import { NavLink } from 'react-router-dom';
 import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri';
 import RoutePaths from '@/constants/route-paths';
-import { NAV_LINKS } from '@/constants/global';
+import { MAIN_CONTACT_NUMBERS, NAV_LINKS } from '@/constants/global';
 import { useMakeFixedBody } from '@/hooks';
 import { Phone } from '@/components';
 
@@ -29,7 +29,7 @@ export const Header = memo(() => {
           </List>
         </Flex>
         <Flex gap={8}>
-          <Phone textProps={{ display: { sm: 'block', base: 'none' } }} />
+          <Phone number={MAIN_CONTACT_NUMBERS[0]} textProps={{ display: { sm: 'block', base: 'none' } }} />
           {/*Mobile Nav toggle*/}
           <Button
             h="4rem"
@@ -71,7 +71,7 @@ export const Header = memo(() => {
           </NavLink>
         </ListItem>)}
       </List>
-      <Phone />
+      <Phone number={MAIN_CONTACT_NUMBERS[0]} />
     </Flex>
     {/*_____*/}
   </Flex>

@@ -14,10 +14,15 @@ import {
   Heading
 } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
-import { RiMapPin2Line, RiMailLine, RiFacebookCircleFill } from 'react-icons/ri';
+import { RiMapPin2Line, RiMailLine, RiBankCardLine } from 'react-icons/ri';
 import RoutePaths from '@/constants/route-paths';
 import { Phone } from '@/components';
-import { MAIN_CONTACT_SOCIAL_FB, MAIN_CONTACT_ADDRESS, MAIN_CONTACT_EMAIL, NAV_LINKS } from '@/constants/global';
+import {
+  MAIN_CONTACT_ADDRESS,
+  MAIN_CONTACT_EMAIL,
+  NAV_LINKS,
+  MAIN_CONTACT_NUMBERS, MAIN_CONTACT_DOT_CART
+} from '@/constants/global';
 
 export const Footer = memo(() => {
 
@@ -44,7 +49,7 @@ export const Footer = memo(() => {
         <GridItem gap={4} as={Flex} flexDir="column" justifyContent="space-between">
           <Box />
           <Flex gap={8} flexWrap="wrap">
-            <Phone />
+            <Phone number={MAIN_CONTACT_NUMBERS[1]} />
             <Link href={`mailto:${MAIN_CONTACT_EMAIL}`} fontSize="1.4rem" alignItems="center" display="flex" gap={4} color="white">
               <Icon as={RiMailLine} fontSize="2.2rem" />
               {MAIN_CONTACT_EMAIL}
@@ -53,7 +58,7 @@ export const Footer = memo(() => {
         </GridItem>
         <GridItem>
           <Flex flexWrap="wrap" gap="3rem" h="full">
-            <List spacing={6}>
+            <List spacing={6} display="flex" flexDir="column" justifyContent="end">
               {NAV_LINKS.map(link => <ListItem key={link.path} color="white" fontSize="1.4rem" fontWeight="600">
                 <NavLink to={link.path}>
                   {link.label}
@@ -62,10 +67,10 @@ export const Footer = memo(() => {
             </List>
             <Flex flexDir="column" justifyContent="space-between">
               <Box />
-              <Box>
-                <Heading fontSize="1.6rem" color="white" mb={4}>Follow Us</Heading>
-                <Link href={MAIN_CONTACT_SOCIAL_FB} target="_blank" fontSize="2rem" color="white">
-                  <Icon as={RiFacebookCircleFill} />
+              <Box as={Flex} flexDir="column" gap={6}>
+                <Heading fontSize="1.6rem" color="white" mb={0}>Follow Us</Heading>
+                <Link href={MAIN_CONTACT_DOT_CART} target="_blank" display="flex" fontSize="2rem" color="white">
+                  <Icon as={RiBankCardLine} />
                 </Link>
               </Box>
             </Flex>
