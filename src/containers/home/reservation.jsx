@@ -3,7 +3,7 @@ import { ReservationForm } from '@/components';
 
 export const Reservation = () => {
   return (
-    <Container maxW='120rem'>
+    <Container maxW='120rem' mb={8}>
       <Grid templateColumns={{ base: '1fr', sm: '1fr 1fr'}} gap={{ base: '4rem', sm: '8rem'}}>
         <GridItem>
           <Image src="/reserve_car.png" ml="calc((100vw - min(calc(100vw - 1rem), 120rem)) / 2 * -1)" />
