@@ -1,7 +1,5 @@
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import { AppProviders } from '@/providers/app';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';

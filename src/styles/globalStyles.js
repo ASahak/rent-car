@@ -2,19 +2,27 @@
 export default {
   global: (props) => ({
     'html': {
+      height: '-webkit-fill-available',
       fontSize: '10px',
       [`@media only screen and (max-width: ${props.theme.breakpoints.lg})`]: {
         fontSize: '8px',
       }
     },
     'body': {
+      height: '100%',
+      '-webkit-overflow-scrolling': 'touch',
       background: 'black',
-      transition: '0s'
+      transition: '0s',
     },
     'body.freeze-body': {
       position: 'fixed',
-      width: '100%',
-      height: '100%',
+      height: '100dvh',
+    },
+    '@supports (-webkit-touch-callout: none)': {
+      body: {
+        /* The hack for Safari */
+        minHeight: '-webkit-fill-available',
+      }
     },
     'body, *': {
       fontFamily: 'Poppins,sans-serif;',

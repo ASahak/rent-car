@@ -1,7 +1,6 @@
 import { memo } from 'react';
-import { Box, Image, Flex, Grid, GridItem, Heading, Icon, Text } from '@chakra-ui/react';
-import { RiCarLine, RiMapPin2Line, RiCalendarTodoLine } from 'react-icons/ri';
-import Slider from 'react-slick';
+import { Box, Image } from '@chakra-ui/react';
+import { InfiniteLooper } from '@/components'
 
 const CAR_BRANDS = [
   { src: '/car-brands/brand1.webp' },
@@ -15,41 +14,18 @@ const CAR_BRANDS = [
   { src: '/car-brands/brand9.webp' },
   { src: '/car-brands/brand10.webp' },
 ]
-const settings = {
-  dots: false,
-  arrows: false,
-  infinite: true,
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 4000,
-  autoplaySpeed: 3000,
-  cssEase: 'linear',
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 6,
-      }
-    },
-    {
-      breakpoint: 577,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-  ]
-};
 export const CarBrands = memo(() => {
   return (
     <Box className="slider-container" w="full" py="4rem" pointerEvents="none">
-      <Slider {...settings}>
-        {CAR_BRANDS.map(brand => (
-          <Box w="full" h="7rem"  display="flex !important" alignItems="center" justifyContent="center" key={brand.src}>
-            <Image h="full" filter="grayscale(1) invert(1)" src={brand.src} />
-          </Box>
-        ))}
-      </Slider>
+      <InfiniteLooper direction="right" speed="15">
+        <Box className="contentBlock" h="12rem" gap="10rem">
+          {CAR_BRANDS.map(brand => (
+            <Box w="full" h="7rem"  display="flex !important" alignItems="center" justifyContent="center" key={brand.src}>
+              <Image h="full" filter="grayscale(1) invert(1)" src={brand.src} />
+            </Box>
+          ))}
+        </Box>
+      </InfiniteLooper>
     </Box>
   )
 })

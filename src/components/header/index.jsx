@@ -53,7 +53,7 @@ export const Header = memo(() => {
       bgColor="black"
       zIndex={99}
       w="full"
-      h="calc(100vh - 8rem)"
+      h="calc(100dvh - 8rem)"
       p={4}
       pb={8}
       transition=".3s"

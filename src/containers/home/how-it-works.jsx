@@ -10,7 +10,7 @@ export const HowItWorks = memo(() => {
         <br/>
         How it works?
       </Heading>
-      <Grid templateColumns={{ base: '1fr', xs: '1fr 1fr 1fr'}} w="fit-content" mx="auto" gap={{ base: '2rem', sm: '8rem' }}>
+      <Grid templateColumns={{ base: '1fr 1fr 1fr'}} w="fit-content" mx="auto" gap={{ base: '2rem', sm: '8rem' }}>
         <GridItem color="white">
           <Flex alignItems="center" flexDir="column">
             <Box bgColor="brand.500" rounded="full" h="6rem" w="6rem" display="flex" alignItems="center" justifyContent="center">

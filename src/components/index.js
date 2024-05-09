@@ -1,3 +1,5 @@
 export { Header } from './header'
 export { Footer } from './footer'
 export { Phone } from './phone'
+export { InfiniteLooper } from './infinity-slider'
+export { ReservationForm } from './reservation-form'
