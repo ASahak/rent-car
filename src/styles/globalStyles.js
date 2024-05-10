@@ -26,6 +26,8 @@ export default {
     },
     'body, *': {
       fontFamily: 'Poppins,sans-serif;',
+      fontWeight: 400,
+      fontStyle: 'normal',
       margin: '0',
       boxSizing: 'border-box',
       padding: '0',
@@ -72,6 +74,7 @@ export default {
       fill: 'white',
       zIndex: '22',
       fontSize: '1.4rem',
+      cursor: 'pointer',
       right: '5px',
       bottom: 0,
       top: 0,

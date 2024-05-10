@@ -26,6 +26,8 @@ export const ReservationForm = () => {
       serviceType: '',
       pickUpTime: '',
       pickUpDate: '',
+      pickUpLocation: '',
+      pickDropLocation: '',
     }
   });
 
@@ -34,8 +36,8 @@ export const ReservationForm = () => {
   }
 
   return (
-    <VStack>
       <Box as="form" w="full" onSubmit={handleSubmit(onSubmit)}>
+    <VStack spacing={8}>
         <FormControl>
           <FormLabel
             fontSize="1.4rem"
@@ -60,7 +62,7 @@ export const ReservationForm = () => {
             render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
           />
         </FormControl>
-        <Flex gap={8} mt={8}>
+        <Flex gap={8} w="full">
           <FormControl>
             <FormLabel
               fontSize="1.4rem"
@@ -81,7 +83,7 @@ export const ReservationForm = () => {
                 showIcon
                 toggleCalendarOnIconClick
                 placeholderText="Choose Date"
-                customInput={<Input w="full" variant="base" />}
+                customInput={<Input w="full" variant="base"/>}
               />}
             />
             <ErrorMessage
@@ -114,9 +116,9 @@ export const ReservationForm = () => {
                 dateFormat="h:mm aa"
                 showIcon
                 toggleCalendarOnIconClick
-                icon={<Icon as={RiTimeLine} fontSize="1.6rem !important" />}
+                icon={<Icon as={RiTimeLine} fontSize="1.6rem !important"/>}
                 placeholderText="Choose Time"
-                customInput={<Input variant="base" />}
+                customInput={<Input variant="base"/>}
               />}
             />
             <ErrorMessage
@@ -126,6 +128,32 @@ export const ReservationForm = () => {
             />
           </FormControl>
         </Flex>
+        <FormControl>
+          <FormLabel
+            fontSize="1.4rem"
+            fontWeight="400"
+            lineHeight="2.2rem"
+            color="white"
+          >
+            Pick Up Location
+          </FormLabel>
+          <Controller
+            control={control}
+            name="pickUpLocation"
+            render={({ field }) => <Box
+              as={Input}
+              // selected={field.value}
+              // onChange={(date) => field.onChange(date)}
+              // apiKey={'AIzaSyAmO1ZQn9Uaps930vplzxdj_wivWXjKOgE'}
+              placeholder="Choose place"
+            />}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="pickUpTime"
+            render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
+          />
+        </FormControl>
         <Button
           type="submit"
           variant="brand"
@@ -135,7 +163,7 @@ export const ReservationForm = () => {
         >
           Send Message
         </Button>
-      </Box>
     </VStack>
-)
+      </Box>
+  )
 }
