@@ -12,7 +12,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { ErrorMessage } from '@hookform/error-message';
 import DatePicker from 'react-datepicker';
 import { ReservationFormSchema } from '@/utils/validators';
-import { Select } from '@/components';
+import { Autocomplete, Select } from '@/components';
 import { SERVICE_TYPES } from '@/constants/global';
 
 export const ReservationForm = () => {
@@ -140,12 +140,10 @@ export const ReservationForm = () => {
           <Controller
             control={control}
             name="pickUpLocation"
-            render={({ field }) => <Box
-              as={Input}
-              // selected={field.value}
-              // onChange={(date) => field.onChange(date)}
-              // apiKey={'AIzaSyAmO1ZQn9Uaps930vplzxdj_wivWXjKOgE'}
+            render={({ field }) => <Autocomplete
               placeholder="Choose place"
+              selected={field.value}
+              onSelect={(v) => field.onChange(v)}
             />}
           />
           <ErrorMessage

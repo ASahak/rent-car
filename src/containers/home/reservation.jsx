@@ -5,7 +5,7 @@ export const Reservation = () => {
   return (
     <Container maxW='120rem' mb={8}>
       <Grid templateColumns={{ base: '1fr', sm: '1.5fr 1fr'}} gap={{ '2xl': '4rem', xs: '4rem', sm: '0' }}>
-        <GridItem display={{ base: 'none', sm: 'block' }}>
+        <GridItem display={{ base: 'none', sm: 'flex' }} alignItems="center">
           <Image
             src="/reserve_car.png"
             ml={{ '2xl': '0', xs: '0', sm: 'calc((100vw - calc(min(calc(100vw - 1rem), 120rem)) / 1.2) / 2 * -1)' }}
