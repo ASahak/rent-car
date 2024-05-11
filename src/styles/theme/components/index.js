@@ -11,3 +11,5 @@ export { default as Tooltip } from './Toolitp';
 export { default as Checkbox } from './Checkbox';
 export { default as Textarea } from './Textarea';
 export { default as Alert } from './Alert';
+export { default as Popover } from './Popover';
+export { default as NumberInput } from './NumberInput';

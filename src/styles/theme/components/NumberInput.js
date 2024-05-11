@@ -6,22 +6,6 @@ export default defineStyleConfig({
   },
   sizes: {},
   variants: {
-    'autocomplete': () => ({
-      field: {
-        padding: '1.3rem',
-        borderRadius: '0.6rem',
-        textAlign: 'left',
-        bgColor: 'black',
-        height: '4.4rem',
-        color: 'white',
-        fontWeight: 500,
-        border: '1px solid white',
-        fontSize: '1.2rem',
-        _focus: {
-          borderColor: 'brand.500',
-        }
-      }
-    }),
     'base': ({ colorMode }) => ({
       field: {
         padding: '1.3rem',
@@ -45,16 +29,6 @@ export default defineStyleConfig({
         }
       }
     }),
-    'non-outline': () => ({
-      field: {
-        outline: 'none',
-        boxShadow: 'none',
-        border: 'none',
-        appearance: 'none',
-        fontSize: '1.4rem !important',
-        color: '#000',
-      }
-    })
   },
   defaultProps: {},
 })

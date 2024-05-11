@@ -1,21 +1,32 @@
+import { useContext } from 'react';
 import {
   VStack,
   FormControl,
   FormLabel,
   Button,
   Text,
-  Box, Flex, Input, Icon
+  Box,
+  Flex,
+  Input,
+  NumberInput,
+  NumberInputField,
+  Icon
 } from '@chakra-ui/react';
 import { RiTimeLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ErrorMessage } from '@hookform/error-message';
 import DatePicker from 'react-datepicker';
 import { ReservationFormSchema } from '@/utils/validators';
 import { Autocomplete, Select } from '@/components';
-import { SERVICE_TYPES } from '@/constants/global';
+import { MAX_PASSENGERS, SERVICE_TYPES } from '@/constants/global';
+import { ReservationContext } from '@/contexts/reservation';
+import RoutePaths from '@/constants/route-paths';
 
 export const ReservationForm = () => {
+  const { steps, setSteps } = useContext(ReservationContext);
+  const navigate = useNavigate();
   const {
     handleSubmit,
     control,
@@ -23,21 +34,27 @@ export const ReservationForm = () => {
   } = useForm({
     resolver: yupResolver(ReservationFormSchema),
     defaultValues: {
-      serviceType: '',
-      pickUpTime: '',
-      pickUpDate: '',
-      pickUpLocation: '',
-      pickDropLocation: '',
+      serviceType: steps.one?.serviceType || '',
+      pickUpTime: steps.one?.pickUpTime ? new Date(steps.one.pickUpTime) : '',
+      pickUpDate: steps.one?.pickUpDate ? new Date(steps.one.pickUpDate) : '',
+      pickUpLocation: steps.one?.pickUpLocation || '',
+      dropOffLocation: steps.one?.dropOffLocation || '',
+      passengers: steps.one?.passengers || '',
     }
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    setSteps({
+      one: data,
+      two: null,
+      three: null,
+    });
+    navigate(`${RoutePaths.RESERVATION}?step=1`);
   }
 
   return (
-      <Box as="form" w="full" onSubmit={handleSubmit(onSubmit)}>
-    <VStack spacing={8}>
+    <Box as="form" w="full" onSubmit={handleSubmit(onSubmit)}>
+      <VStack spacing={8}>
         <FormControl>
           <FormLabel
             fontSize="1.4rem"
@@ -77,6 +94,8 @@ export const ReservationForm = () => {
               name="pickUpDate"
               render={({ field }) => <Box
                 as={DatePicker}
+                fontSize="1.4rem"
+                autoComplete="off"
                 selected={field.value}
                 onChange={(date) => field.onChange(date)}
                 w="full"
@@ -106,6 +125,7 @@ export const ReservationForm = () => {
               name="pickUpTime"
               render={({ field }) => <Box
                 as={DatePicker}
+                autoComplete="off"
                 selected={field.value}
                 onChange={(date) => field.onChange(date)}
                 w="full"
@@ -113,6 +133,7 @@ export const ReservationForm = () => {
                 showTimeSelectOnly
                 timeIntervals={5}
                 timeCaption="Time"
+                fontSize="1.4rem"
                 dateFormat="h:mm aa"
                 showIcon
                 toggleCalendarOnIconClick
@@ -148,7 +169,62 @@ export const ReservationForm = () => {
           />
           <ErrorMessage
             errors={errors}
-            name="pickUpTime"
+            name="pickUpLocation"
+            render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel
+            fontSize="1.4rem"
+            fontWeight="400"
+            lineHeight="2.2rem"
+            color="white"
+          >
+            Drop off Location
+          </FormLabel>
+          <Controller
+            control={control}
+            name="dropOffLocation"
+            render={({ field }) => <Autocomplete
+              placeholder="Choose place"
+              selected={field.value}
+              onSelect={(v) => field.onChange(v)}
+            />}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="dropOffLocation"
+            render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel
+            fontSize="1.4rem"
+            fontWeight="400"
+            lineHeight="2.2rem"
+            color="white"
+          >
+            Number of passengers
+          </FormLabel>
+          <Controller
+            control={control}
+            name="passengers"
+            render={({ field }) => <NumberInput
+              min={0}
+              max={MAX_PASSENGERS}
+              clampValueOnBlur={false}
+              value={field.value}
+              variant="base">
+              <NumberInputField
+                placeholder="Enter passengers count"
+                fontSize="1.4rem"
+                onChange={(e) => field.onChange(e.target.value)}
+              />
+            </NumberInput>}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="passengers"
             render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
           />
         </FormControl>
@@ -159,9 +235,9 @@ export const ReservationForm = () => {
           mt={6}
           w="full"
         >
-          Send Message
+          Next Step
         </Button>
-    </VStack>
-      </Box>
+      </VStack>
+    </Box>
   )
 }

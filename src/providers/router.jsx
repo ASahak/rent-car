@@ -6,11 +6,16 @@ import Layouts from '@/components/layouts';
 import ROUTER_PATHS from '@/constants/route-paths';
 import { LAYOUTS } from '@/constants/layouts';
 const Home = lazy(() => import('@/pages/home'));
+const Reservation = lazy(() => import('@/pages/reservation'));
 
 export const routes = [
   {
     path: ROUTER_PATHS.HOME,
     element: <Home />,
+  },
+  {
+    path: ROUTER_PATHS.RESERVATION,
+    element: <Reservation />,
   },
 ]
 const renderRoutes = () => {

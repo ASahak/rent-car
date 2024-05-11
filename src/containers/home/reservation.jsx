@@ -15,7 +15,7 @@ export const Reservation = () => {
           <Heading mb={10} fontSize="4rem" color="white" fontWeight={600} letterSpacing={2}>
             Reservation
           </Heading>
-          <Text color="brand.500" fontSize="1.4rem" mb={10}>Step1: Ride info</Text>
+          <Text color="brand.500" fontSize="1.8rem" mb={10}>Step1: Ride info</Text>
           <ReservationForm />
         </GridItem>
       </Grid>

@@ -5,8 +5,8 @@ import { Button, Menu, MenuButton, MenuItem, MenuList, Text, Icon } from '@chakr
 
 export const Select = memo(({ options, selected, onSelect }) => {
   const renderValue = () => (!selected
-      ? <Text fontSize="1.2rem" variant="placeholder" color="gray.200" >Select option</Text>
-      : <Text fontSize="1.2rem" fontWeight="500" color="white">{options.find(opt => opt.value === selected)?.label}</Text>
+      ? <Text fontSize="1.4rem" variant="placeholder" color="gray.200" >Select option</Text>
+      : <Text fontSize="1.4rem" fontWeight="500" color="white">{options.find(opt => opt.value === selected)?.label}</Text>
   )
 
   return (<Menu variant="base" matchWidth>

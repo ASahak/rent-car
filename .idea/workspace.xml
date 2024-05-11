@@ -8,11 +8,22 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/location.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/location.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/autocomplete/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/autocomplete/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/base.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/base.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/select/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/select/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/home/reservation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/home/reservation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useFetchPlaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFetchPlaces.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/providers/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/router.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globalStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/contexts",
+    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/components/route-transition",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,11 +64,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\contexts" />
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\components\route-transition" />
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\components\route-loading" />
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\pages" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\providers" />
-      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\components" />
-      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\assets\icons" />
-      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\utils" />
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\styles\theme\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car" />
@@ -76,7 +87,8 @@
       <workItem from="1715244255864" duration="9180000" />
       <workItem from="1715281188529" duration="5378000" />
       <workItem from="1715369104744" duration="5039000" />
-      <workItem from="1715417324346" duration="5479000" />
+      <workItem from="1715417324346" duration="5511000" />
+      <workItem from="1715444489977" duration="14037000" />
     </task>
     <servers />
   </component>

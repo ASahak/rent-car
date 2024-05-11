@@ -72,10 +72,10 @@ export default {
     },
     '.react-datepicker__input-container .react-datepicker__calendar-icon': {
       fill: 'white',
-      zIndex: '22',
       fontSize: '1.4rem',
       cursor: 'pointer',
       right: '5px',
+      zIndex: 0,
       bottom: 0,
       top: 0,
       margin: 'auto'

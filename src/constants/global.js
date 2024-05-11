@@ -24,3 +24,4 @@ export const SERVICE_TYPES = [
   { label: 'Point To Point', value: 'point-to-point' },
   { label: 'City tour', value: 'city-tour' },
 ]
+export const MAX_PASSENGERS = 10;

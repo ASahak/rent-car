@@ -1,12 +1,15 @@
 import { Chakra } from './chakra';
 import { Router } from './router';
 import { Toast } from './toast';
+import { Reservation } from './reservation';
 
 export const AppProviders = () => {
   return (
     <Chakra>
       <Toast>
-        <Router />
+        <Reservation>
+          <Router />
+        </Reservation>
       </Toast>
     </Chakra>
   )

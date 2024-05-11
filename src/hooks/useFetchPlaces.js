@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { ToastContext } from '@/contexts';
 
 export const useFetchPlaces = () => {
@@ -31,7 +31,7 @@ export const useFetchPlaces = () => {
         label: e.properties.formatted,
         value: e.properties.place_id,
       }))
-      console.log(data, list);
+
       setIsLoading(false);
       setData(list);
 
