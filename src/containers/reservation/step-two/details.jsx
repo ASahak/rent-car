@@ -1,10 +1,10 @@
-import { useContext } from 'react';
+import { useContext, memo } from 'react';
 import dayjs from 'dayjs';
 import { VStack, Text, Flex, Box } from '@chakra-ui/react';
 import { ReservationContext } from '@/contexts/reservation';
 import ReactLocationIcon from '@/assets/icons/location.svg?react';
 
-export const Details = () => {
+export const Details = memo(() => {
   const { steps } = useContext(ReservationContext);
   const { pickUpDate, pickUpTime, passengers, pickUpLocation, dropOffLocation } = steps.one;
 
@@ -29,4 +29,4 @@ export const Details = () => {
       </VStack>
     </VStack>
   )
-}
+})

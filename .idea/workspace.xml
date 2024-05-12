@@ -6,25 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8e41f7bb-d925-4c80-9754-0e8e79d5240e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/location.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/location.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/autocomplete/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/autocomplete/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layouts/base.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/base.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/select/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/select/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/home/reservation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/home/reservation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useFetchPlaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFetchPlaces.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/app.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/router.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globalStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-one/details.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/reservation/step-two/details.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-one/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/reservation/step-two/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/reservation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reservation.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/components/route-transition",
+    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/genie/frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,7 +76,8 @@
       <workItem from="1715281188529" duration="5378000" />
       <workItem from="1715369104744" duration="5039000" />
       <workItem from="1715417324346" duration="5511000" />
-      <workItem from="1715444489977" duration="14037000" />
+      <workItem from="1715444489977" duration="14416000" />
+      <workItem from="1715517498126" duration="4907000" />
     </task>
     <servers />
   </component>

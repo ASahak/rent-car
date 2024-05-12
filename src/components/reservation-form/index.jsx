@@ -49,7 +49,7 @@ export const ReservationForm = () => {
       two: null,
       three: null,
     });
-    navigate(`${RoutePaths.RESERVATION}?step=1`);
+    navigate(`${RoutePaths.RESERVATION}?step=2`);
   }
 
   return (
