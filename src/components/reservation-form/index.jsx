@@ -25,7 +25,7 @@ import { ReservationContext } from '@/contexts/reservation';
 import RoutePaths from '@/constants/route-paths';
 
 export const ReservationForm = () => {
-  const { steps, setSteps } = useContext(ReservationContext);
+  const { data, setData } = useContext(ReservationContext);
   const navigate = useNavigate();
   const {
     handleSubmit,
@@ -34,20 +34,19 @@ export const ReservationForm = () => {
   } = useForm({
     resolver: yupResolver(ReservationFormSchema),
     defaultValues: {
-      serviceType: steps.one?.serviceType || '',
-      pickUpTime: steps.one?.pickUpTime ? new Date(steps.one.pickUpTime) : '',
-      pickUpDate: steps.one?.pickUpDate ? new Date(steps.one.pickUpDate) : '',
-      pickUpLocation: steps.one?.pickUpLocation || '',
-      dropOffLocation: steps.one?.dropOffLocation || '',
-      passengers: steps.one?.passengers || '',
+      serviceType: data.details?.serviceType || '',
+      pickUpTime: data.details?.pickUpTime ? new Date(data.details.pickUpTime) : '',
+      pickUpDate: data.details?.pickUpDate ? new Date(data.details.pickUpDate) : '',
+      pickUpLocation: data.details?.pickUpLocation || '',
+      dropOffLocation: data.details?.dropOffLocation || '',
+      passengers: data.details?.passengers || '',
     }
   });
 
   const onSubmit = (data) => {
-    setSteps({
-      one: data,
-      two: null,
-      three: null,
+    setData({
+      details: data,
+      car: null,
     });
     navigate(`${RoutePaths.RESERVATION}?step=2`);
   }

@@ -5,8 +5,8 @@ import { ReservationContext } from '@/contexts/reservation';
 import ReactLocationIcon from '@/assets/icons/location.svg?react';
 
 export const Details = memo(() => {
-  const { steps } = useContext(ReservationContext);
-  const { pickUpDate, pickUpTime, passengers, pickUpLocation, dropOffLocation } = steps.one;
+  const { data } = useContext(ReservationContext);
+  const { pickUpDate, pickUpTime, passengers, pickUpLocation, dropOffLocation } = data.details;
 
   return (
     <VStack spacing="2.5rem" w="full" alignItems="start">

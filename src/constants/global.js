@@ -24,7 +24,6 @@ export const SERVICE_TYPES = [
   { label: 'Point To Point', value: 'point-to-point' },
   { label: 'City tour', value: 'city-tour' },
 ]
-export const MAX_PASSENGERS = 10;
 
 export const CARS = [
   {
@@ -35,7 +34,6 @@ export const CARS = [
     passengers: 4,
     transferBoxType: 'Auto',
     airConditioner: true,
-    price: 1600,
     img: '/cars/bmw_7_2022.png',
   }, {
     id: 2,
@@ -45,37 +43,34 @@ export const CARS = [
     passengers: 4,
     transferBoxType: 'Auto',
     airConditioner: true,
-    price: 1600,
     img: '/cars/bmw_5_2024.png',
   }, {
     id: 3,
     label: 'Chevrolet Suburban',
     year: 2024,
     doors: 4,
-    passengers: 4,
+    passengers: 6,
     transferBoxType: 'Auto',
     airConditioner: true,
-    price: 1600,
     img: '/cars/chevrolet_2024.png',
   }, {
     id: 4,
     label: 'Chevrolet Suburban',
     year: 2020,
     doors: 4,
-    passengers: 4,
+    passengers: 6,
     transferBoxType: 'Auto',
     airConditioner: true,
-    price: 1600,
     img: '/cars/chevrolet_2020.png',
   }, {
     id: 5,
     label: 'Cadillac Escalade ESV platinum package',
     year: 2020,
     doors: 4,
-    passengers: 4,
+    passengers: 6,
     transferBoxType: 'Auto',
     airConditioner: true,
-    price: 1600,
     img: '/cars/cadillac_2020.png',
   }
 ]
+export const MAX_PASSENGERS = Math.max(...CARS.map(c => c.passengers));

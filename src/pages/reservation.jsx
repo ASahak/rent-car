@@ -5,13 +5,13 @@ import { StepOne } from '@/containers/reservation/step-one';
 import { ReservationContext } from '@/contexts/reservation';
 
 export default function Reservation() {
-  const { steps } = useContext(ReservationContext);
+  const { data } = useContext(ReservationContext);
   const [searchParams] = useSearchParams();
   const step = searchParams.get('step');
 
   switch (step) {
     case '2': {
-      if (!steps.one) return <StepOne />
+      if (!data.details) return <StepOne />
       return <StepTwo/>;
     }
     default:

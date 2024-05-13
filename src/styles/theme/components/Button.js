@@ -43,7 +43,7 @@ export default defineStyleConfig({
       fontSize: '1.4rem',
       fontWeight: 400,
       _hover: {
-        background: 'brand.600',
+        backgroundColor: 'brand.600 !important',
       }
     }),
   },

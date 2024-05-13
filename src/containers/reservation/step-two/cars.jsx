@@ -1,27 +1,68 @@
-import { memo, useContext } from 'react';
+import { memo, useContext, useState } from 'react';
+import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
-import { Box, Grid, GridItem, VStack, Image, Heading, Flex, Text, Divider, Button } from '@chakra-ui/react';
-import { CARS } from '@/constants/global';
+import { Box, Grid, GridItem, VStack, Image, Heading, Flex, Text, Divider, Button, useToast } from '@chakra-ui/react';
+import { CARS, SERVICE_TYPES } from '@/constants/global';
 import ReactAccountIcon from '@/assets/icons/account.svg?react';
 import ReactWinterIcon from '@/assets/icons/winter.svg?react';
 import ReactTransferBoxIcon from '@/assets/icons/transferBox.svg?react';
 import ReactDoorIcon from '@/assets/icons/door.svg?react';
-import { formatNumber } from '@/utils/helpers';
 import { ReservationContext } from '@/contexts/reservation';
+import { ToastContext } from '@/contexts';
 import RoutePaths from '@/constants/route-paths';
 
 export const Cars = memo(() => {
-  const { steps, setSteps } = useContext(ReservationContext);
+  const { data, setData } = useContext(ReservationContext);
   const navigate = useNavigate();
-  const selected = steps.two;
+  const [isLoadingId, setIsLoadingId] = useState(null);
+  const { onToast } = useContext(ToastContext);
+  const selected = data.car;
 
-  const onSelectCar = (car) => {
-    setSteps({
-      ...steps,
-      two: car,
-      three: null,
-    });
-    navigate(`${RoutePaths.RESERVATION}?step=3`);
+  const onSelectCar = async (car) => {
+    try {
+      setIsLoadingId(car.id);
+      const apiBaseUrl = import.meta.env.MODE === 'development'
+        ? `${import.meta.env.VITE_API_BASE_URL_DEV}:${import.meta.env.VITE_NODE_PORT}/`
+        : import.meta.env.VITE_API_BASE_URL_PROD;
+      const response = await fetch(`${apiBaseUrl}send-email`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          carModel: `(${car.year}) ${car.label}`,
+          serviceType: SERVICE_TYPES.find(e => e.value === data.details.serviceType).label,
+          pickUpDate: `${dayjs(data.details.pickUpDate).format('DD/MM/YYYY')} at ${dayjs(data.details.pickUpTime).format('h:mm A')}`,
+          pickUpLocation: data.details.pickUpLocation,
+          dropOffLocation: data.details.dropOffLocation,
+          passengers: data.details.passengers,
+        })
+      })
+      const { error } = await response.json();
+      if (error) {
+        throw Error(error)
+      }
+      setData({
+        details: null,
+        car: null,
+      });
+      onToast({
+        title: '',
+        description: 'Your reservation created successfully',
+        status: 'success',
+      });
+      navigate(RoutePaths.HOME);
+    } catch (err) {
+      console.error(err);
+      onToast({
+        title: '',
+        description: err.message,
+        status: 'error',
+      });
+    } finally {
+      setIsLoadingId(null);
+    }
   }
 
   return (<Grid templateColumns={{ base: '1fr', md: '1fr 1fr 1fr' }} gap={{ base: '4rem', md: '6rem' }}>
@@ -72,14 +113,16 @@ export const Cars = memo(() => {
           </Box>
           <Divider />
           <Box w="full">
-            <Flex justifyContent="space-between">
-              <Text color="gray.220" fontSize="1.5rem">Price</Text>
-              <Text color="gray.220" fontSize="1.4rem">
-                <Text as="span" color="white" fontSize="1.6rem">${formatNumber(car.price)}</Text>
-                /per day
-              </Text>
-            </Flex>
-            <Button mx="auto" variant="brand" px={16} mt="2.4rem" color="black" fontWeight={500} onClick={() => onSelectCar(car)}>Rent car</Button>
+            <Button
+              isLoading={isLoadingId === car.id}
+              mx="auto"
+              variant="brand"
+              px={16}
+              mt="2.4rem"
+              color="black"
+              fontWeight={500}
+              onClick={() => onSelectCar(car)}
+            >Rent car</Button>
           </Box>
         </VStack>
       </GridItem>
