@@ -2,10 +2,10 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const dotenv = require('dotenv');
-dotenv.config({ path: '../.env' });
+dotenv.config();
 
 const app = express();
-const port = process.env.VITE_NODE_PORT;
+const port = process.env.NODE_PORT;
 const isProd = process.env.NODE_ENV === 'production';
 
 app.use(cors());
@@ -14,8 +14,8 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
-const myEmail = process.env.VITE_SENDER_EMAIL;
-const myPassword = process.env.VITE_NODEMAILER_PASS;
+const myEmail = process.env.SENDER_EMAIL;
+const myPassword = process.env.NODEMAILER_PASS;
 
 function sendEmail(reservationDetails) {
   return new Promise((resolve, reject) => {
@@ -97,5 +97,5 @@ app.post('/send-email', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`STS is listening at ${isProd ? process.env.VITE_API_BASE_URL_PROD : process.env.VITE_API_BASE_URL_DEV}:${port}`);
+  console.log(`STS is listening at ${isProd ? process.env.API_BASE_URL_PROD : process.env.API_BASE_URL_DEV}:${port}`);
 });

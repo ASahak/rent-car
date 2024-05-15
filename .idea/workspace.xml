@@ -5,18 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e41f7bb-d925-4c80-9754-0e8e79d5240e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/car-brands/brand1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/car-brands/brand2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/car-brands/brand3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/car_hero_luxury.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cars/bmw_5_2024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cars/bmw_7_2022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cars/cadillac_2020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cars/chevrolet_2020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cars/chevrolet_2024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/hero-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/reserve_car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/reserve_car2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/reserve_car3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/select/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/select/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-two/cars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/reservation/step-two/cars.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-two/details.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/reservation/step-two/details.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/account.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/bg-mark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/car.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/door.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/easly-mark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/location.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/transferBox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/winter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/autocomplete/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/infinity-slider/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/infinity-slider/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/base.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/phone-field/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/phone/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/route-loading/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/router-transition/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/select/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/countries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/layouts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/route-paths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/home/car-brands.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/home/hero.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/home/how-it-works.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/home/reservation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reservation/info.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-one/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-two/cars.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-two/details.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-two/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/reservation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useBus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useFetchPlaces.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useMakeFixedBody.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/reservation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/app.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/chakra.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/reservation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/router.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/toast.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globalStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Heading.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/NumberInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/foundations/colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/foundations/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/theme/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validators.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-env.d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,30 +123,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/hooks&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/server",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\server" />
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\client" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\hooks" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src" />
-      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\components\route-transition" />
-      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\components\route-loading" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\server" />
+      <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\client" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src" />
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car" />
     </key>
@@ -84,7 +170,8 @@
       <workItem from="1715444489977" duration="14416000" />
       <workItem from="1715517498126" duration="5084000" />
       <workItem from="1715619259198" duration="10744000" />
-      <workItem from="1715796104174" duration="9793000" />
+      <workItem from="1715796104174" duration="9923000" />
+      <workItem from="1715806694582" duration="449000" />
     </task>
     <servers />
   </component>
