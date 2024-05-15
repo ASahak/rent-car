@@ -10,6 +10,7 @@ import ReactDoorIcon from '@/assets/icons/door.svg?react';
 import { ReservationContext } from '@/contexts/reservation';
 import { ToastContext } from '@/contexts';
 import RoutePaths from '@/constants/route-paths';
+import { findCountryCode } from '@/utils/helpers';
 
 export const Cars = memo(() => {
   const { data, setData } = useContext(ReservationContext);
@@ -37,6 +38,8 @@ export const Cars = memo(() => {
           pickUpLocation: data.details.pickUpLocation,
           dropOffLocation: data.details.dropOffLocation,
           passengers: data.details.passengers,
+          phone: `${findCountryCode(data.details.phone.country)} ${data.details.phone.number}`,
+          email: data.details.email,
         })
       })
       const { error } = await response.json();

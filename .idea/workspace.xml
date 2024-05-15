@@ -8,36 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/BMW-7-Series-Rental-Dubai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/bmw_2022_7series.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand1.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/car-brands/brand1.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand10.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand2.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/car-brands/brand2.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand3.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/car-brands/brand3.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand4.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand5.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand6.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand7.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand8.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/brand9.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/car-brands/x6c6ZG5zCQvRSDBStZJSEr9r.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservation-form/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/home/car-brands.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/home/car-brands.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/select/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/select/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-two/cars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/reservation/step-two/cars.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/reservation/step-two/details.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/reservation/step-two/details.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/reservation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reservation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/reservation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/reservation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Badge.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Checkbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Switch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Tabs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Textarea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/Toolitp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,21 +39,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/hooks",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car/src/hooks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\src\hooks" />
@@ -105,7 +83,8 @@
       <workItem from="1715417324346" duration="5511000" />
       <workItem from="1715444489977" duration="14416000" />
       <workItem from="1715517498126" duration="5084000" />
-      <workItem from="1715619259198" duration="10579000" />
+      <workItem from="1715619259198" duration="10744000" />
+      <workItem from="1715796104174" duration="9793000" />
     </task>
     <servers />
   </component>

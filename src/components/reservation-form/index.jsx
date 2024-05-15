@@ -19,10 +19,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { ErrorMessage } from '@hookform/error-message';
 import DatePicker from 'react-datepicker';
 import { ReservationFormSchema } from '@/utils/validators';
-import { Autocomplete, Select } from '@/components';
+import { Autocomplete, PhoneField, Select } from '@/components';
 import { MAX_PASSENGERS, SERVICE_TYPES } from '@/constants/global';
 import { ReservationContext } from '@/contexts/reservation';
 import RoutePaths from '@/constants/route-paths';
+import { findMask } from '@/utils/helpers';
 
 export const ReservationForm = () => {
   const { data, setData } = useContext(ReservationContext);
@@ -40,6 +41,8 @@ export const ReservationForm = () => {
       pickUpLocation: data.details?.pickUpLocation || '',
       dropOffLocation: data.details?.dropOffLocation || '',
       passengers: data.details?.passengers || '',
+      phone: data.details?.phone || { country: 'us', number: '', mask: findMask('us') },
+      email: data.details?.email || ''
     }
   });
 
@@ -224,6 +227,60 @@ export const ReservationForm = () => {
           <ErrorMessage
             errors={errors}
             name="passengers"
+            render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel
+            fontSize="1.4rem"
+            fontWeight="400"
+            lineHeight="2.2rem"
+            color="white"
+          >
+            Email
+          </FormLabel>
+          <Controller
+            control={control}
+            name="email"
+            render={({ field }) => <Input
+              variant="base"
+              placeholder="Your email"
+              fontSize="1.4rem"
+              value={field.value}
+              onChange={(e) => field.onChange(e.target.value)}
+            />}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="email"
+            render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel
+            fontSize="1.4rem"
+            fontWeight="400"
+            lineHeight="2.2rem"
+            color="white"
+          >
+            Phone number
+          </FormLabel>
+          <Controller
+            control={control}
+            name="phone"
+            render={({ field }) => <PhoneField
+              state={field.value}
+              onChange={(e) => field.onChange({ ...field.value, ...e })}
+            />}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="phone.country"
+            render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
+          />
+          <ErrorMessage
+            errors={errors}
+            name="phone.number"
             render={({ message }) => <Text color="red.400" fontSize="1.2rem" mt={1}>{message}</Text>}
           />
         </FormControl>

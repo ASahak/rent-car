@@ -30,7 +30,7 @@ function sendEmail(reservationDetails) {
       },
     });
     const mail_configs = {
-      from: 'no-reply@sts.com',
+      from: reservationDetails.email,
       to: myEmail,
       subject: 'STS Reservation',
       html:
@@ -62,6 +62,14 @@ function sendEmail(reservationDetails) {
             <tr>
               <td><strong>Passengers:</strong></td>
               <td style="padding-left: 10px">${reservationDetails.passengers}</td>
+            </tr>
+            <tr>
+              <td><strong>Email:</strong></td>
+              <td style="padding-left: 10px">${reservationDetails.email}</td>
+            </tr>
+            <tr>
+              <td><strong>Phone:</strong></td>
+              <td style="padding-left: 10px">${reservationDetails.phone}</td>
             </tr>
           </table>
         </td>

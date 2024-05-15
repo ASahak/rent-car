@@ -1,12 +1,13 @@
 import { useContext, memo } from 'react';
 import dayjs from 'dayjs';
-import { VStack, Text, Flex, Box } from '@chakra-ui/react';
+import { VStack, Text, Flex, Box, Icon } from '@chakra-ui/react';
+import { RiMailLine, RiPhoneLine } from 'react-icons/ri';
 import { ReservationContext } from '@/contexts/reservation';
 import ReactLocationIcon from '@/assets/icons/location.svg?react';
 
 export const Details = memo(() => {
   const { data } = useContext(ReservationContext);
-  const { pickUpDate, pickUpTime, passengers, pickUpLocation, dropOffLocation } = data.details;
+  const { pickUpDate, pickUpTime, passengers, pickUpLocation, dropOffLocation, email, phone } = data.details;
 
   return (
     <VStack spacing="2.5rem" w="full" alignItems="start">
@@ -19,12 +20,24 @@ export const Details = memo(() => {
       </Box>
       <VStack alignItems="start" spacing={4}>
         <Text display="grid" gridTemplateColumns="32px 1fr" alignItems="center" gap={6} color="white" fontSize="1.8rem">
-          <ReactLocationIcon stroke="var(--chakra-colors-gray-200)" />
+          <ReactLocationIcon stroke="var(--chakra-colors-gray-200)"/>
           {pickUpLocation}
         </Text>
         <Text display="grid" gridTemplateColumns="32px 1fr" alignItems="center" gap={6} color="white" fontSize="1.8rem">
-          <ReactLocationIcon stroke="var(--chakra-colors-gray-200)" />
+          <ReactLocationIcon stroke="var(--chakra-colors-gray-200)"/>
           {dropOffLocation}
+        </Text>
+        <Text display="grid" gridTemplateColumns="32px 1fr" alignItems="center" gap={6} color="white" fontSize="1.8rem">
+          <Flex justifyContent="center">
+            <Icon as={RiMailLine} color="gray.200" fontSize="2.6rem"/>
+          </Flex>
+          {email}
+        </Text>
+        <Text display="grid" gridTemplateColumns="32px 1fr" alignItems="center" gap={6} color="white" fontSize="1.8rem">
+          <Flex justifyContent="center">
+            <Icon as={RiPhoneLine} color="gray.200" fontSize="2.6rem"/>
+          </Flex>
+          {phone.number}
         </Text>
       </VStack>
     </VStack>
