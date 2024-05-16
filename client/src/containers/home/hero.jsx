@@ -1,8 +1,13 @@
 import { memo } from 'react';
 import { Box, Button, Container, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react';
 import ReactEasilyMark from '@/assets/icons/easly-mark.svg?react';
+import { dispatchBus } from '@/hooks';
 
 export const Hero = memo(() => {
+  const rentCar = () => {
+    dispatchBus('rent-car-from-hero');
+  }
+
   return (
     <Box overflow="hidden" w="full">
       <Container maxW='120rem' position='relative'>
@@ -23,7 +28,7 @@ export const Hero = memo(() => {
             </Text>
             </Heading>
             <Text fontSize="1.6rem" color="gray.220">Get a car wherever and whenever you need it</Text>
-            <Button variant="brand" px={16} mt="2.4rem">Rent a car</Button>
+            <Button variant="brand" px={16} mt="2.4rem" onClick={rentCar}>Rent a car</Button>
           </GridItem>
           <GridItem py="2rem" alignItems="center" display="flex">
             <Image

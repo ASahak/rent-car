@@ -1,7 +1,15 @@
 import { Image, Container, Grid, GridItem, Heading, Text } from '@chakra-ui/react';
 import { ReservationForm } from '@/components';
+import { useBus } from '@/hooks';
+import { useRef } from 'react';
 
 export const Reservation = () => {
+  const headingRef = useRef();
+
+  useBus('rent-car-from-hero', () => {
+    headingRef.current.scrollIntoView({ behavior: 'smooth' })
+  }, []);
+
   return (
     <Container maxW='120rem' mb={8}>
       <Grid templateColumns={{ base: '1fr', sm: '1.5fr 1fr'}} gap={{ '2xl': '4rem', xs: '4rem', sm: '0' }}>
@@ -12,7 +20,7 @@ export const Reservation = () => {
           />
         </GridItem>
         <GridItem>
-          <Heading mb={10} fontSize="4rem" color="white" fontWeight={600} letterSpacing={2}>
+          <Heading mb={10} fontSize="4rem" color="white" fontWeight={600} letterSpacing={2} ref={headingRef}>
             Reservation
           </Heading>
           <Text color="brand.500" fontSize="1.8rem" mb={10}>Step1: Ride info</Text>

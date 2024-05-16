@@ -14,7 +14,6 @@ export const MAIN_CONTACT_ADDRESS = {
 export const NAV_LINKS = [
   { label: 'Home', path: RoutePaths.HOME },
   { label: 'Reservation', path: RoutePaths.RESERVATION },
-  { label: 'Contacts', path: RoutePaths.CONTACT },
 ]
 
 export const SERVICE_TYPES = [
