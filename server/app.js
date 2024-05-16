@@ -90,6 +90,10 @@ function sendEmail(reservationDetails) {
   });
 }
 
+app.get('/', (req, res) => {
+  res.status(200).send('Server is running!')
+});
+
 app.post('/send-email', (req, res) => {
   sendEmail(req.body)
     .then(() => res.status(200).send({ success: true }))
