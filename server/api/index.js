@@ -91,7 +91,7 @@ function sendEmail(reservationDetails) {
 }
 
 app.get('/', (req, res) => {
-  res.status(200).send('Server is running!')
+  return res.send('Server is running!')
 });
 
 app.post('/send-email', (req, res) => {
