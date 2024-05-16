@@ -4,6 +4,7 @@ import { VStack, Text, Flex, Box, Icon } from '@chakra-ui/react';
 import { RiMailLine, RiPhoneLine } from 'react-icons/ri';
 import { ReservationContext } from '@/contexts/reservation';
 import ReactLocationIcon from '@/assets/icons/location.svg?react';
+import { findCountryCode } from '@/utils/helpers';
 
 export const Details = memo(() => {
   const { data } = useContext(ReservationContext);
@@ -37,7 +38,7 @@ export const Details = memo(() => {
           <Flex justifyContent="center">
             <Icon as={RiPhoneLine} color="gray.200" fontSize="2.6rem"/>
           </Flex>
-          {phone.number}
+          {`${findCountryCode(phone.country)} ${phone.number}`}
         </Text>
       </VStack>
     </VStack>
