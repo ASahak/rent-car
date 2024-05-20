@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import {
   VStack,
   FormControl,
@@ -12,6 +12,7 @@ import {
   NumberInputField,
   Icon
 } from '@chakra-ui/react';
+import { useBeforeunload } from 'react-beforeunload';
 import { RiTimeLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
@@ -31,7 +32,7 @@ export const ReservationForm = () => {
   const {
     handleSubmit,
     control,
-    formState: { errors },
+    formState: { errors, isDirty },
   } = useForm({
     resolver: yupResolver(ReservationFormSchema),
     defaultValues: {
@@ -45,7 +46,8 @@ export const ReservationForm = () => {
       email: data.details?.email || ''
     }
   });
-
+  useBeforeunload(isDirty ? (event) => event.preventDefault() : null);
+  console.log(isDirty);
   const onSubmit = (data) => {
     setData({
       details: data,

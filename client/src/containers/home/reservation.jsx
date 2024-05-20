@@ -16,6 +16,7 @@ export const Reservation = () => {
         <GridItem display={{ base: 'none', sm: 'flex' }} alignItems="center">
           <Image
             src="/reserve_car.png"
+            transform="scaleX(-1)"
             ml={{ '2xl': '0', xs: '0', sm: 'calc((100vw - calc(min(calc(100vw - 1rem), 120rem)) / 1.2) / 2 * -1)' }}
           />
         </GridItem>
