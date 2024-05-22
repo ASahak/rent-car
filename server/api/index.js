@@ -8,7 +8,9 @@ const app = express();
 const port = process.env.NODE_PORT;
 const isProd = process.env.NODE_ENV === 'production';
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://api.signaturetransservices.com', 'https://signaturetransservices.com'],
+}));
 app.use(express.json());
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -83,7 +85,7 @@ function sendEmail(reservationDetails) {
     transporter.sendMail(mail_configs, function (error) {
       console.log(error);
       if (error) {
-        return reject({ message: `An error has occurred. Please try again!` });
+        return reject({ message: `An error has occurred. Please try again, due to: ${error.message || error}: email: ${myEmail}, pass:${myPassword}` });
       }
       return resolve({ message: 'Email sent successfully.' });
     });
