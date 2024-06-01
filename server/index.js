@@ -2,6 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const { google } = require('googleapis');
 dotenv.config();
 
 const app = express();
@@ -14,26 +15,39 @@ app.use((req, res, next) => {
   // res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
+const CLIENT_ID = process.env.GMAIL_CLIENT_ID;
+const CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET;
+const REFRESH_TOKEN = process.env.GMAIL_REFRESH_TOKEN;
+const REDIRECT_URI = process.env.GMAIL_REDIRECT_URI;
 const myEmail = process.env.SENDER_EMAIL;
-const myPassword = process.env.NODEMAILER_PASS;
 
-function sendEmail(reservationDetails) {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: 'mail.signaturetransservices.com',
-      port: 465,
-      secure: true,
-      auth: {
-        user: myEmail,
-        pass: myPassword,
-      },
-    });
-    const mail_configs = {
-      from: reservationDetails.email,
-      to: myEmail,
-      subject: 'STS Reservation',
-      html:
-`<table>
+const oAuth2Client = new google.auth.OAuth2(
+  CLIENT_ID,
+  CLIENT_SECRET,
+  REDIRECT_URI
+);
+oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN })
+
+async function sendEmail(reservationDetails) {
+  const accessToken = await oAuth2Client.getAccessToken();
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      type: 'OAuth2',
+      user: myEmail,
+      clientId: CLIENT_ID,
+      clientSecret: CLIENT_SECRET,
+      refreshToken: REFRESH_TOKEN,
+      accessToken: accessToken
+    }
+  });
+  const mail_configs = {
+    from: reservationDetails.email,
+    to: myEmail,
+    subject: 'STS Reservation',
+    html:
+      `<table>
       <tr>
         <td>
           <p>Customer reservation</p>
@@ -78,17 +92,17 @@ function sendEmail(reservationDetails) {
   
 </body>
 </html>`,
-    };
-    return new Promise((resolve, reject) => {
-      transporter.sendMail(mail_configs, (error) => {
-        if (error) {
-          console.error(error);
-          reject({ message: `An error has occurred. Please try again, due to: ${error.message || error}: email: ${myEmail}, pass:${myPassword}` });
-        } else {
-          resolve({ message: 'Email sent successfully.' });
-        }
-      });
+  };
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mail_configs, (error) => {
+      if (error) {
+        console.error(error);
+        reject({ message: `An error has occurred. Please try again, due to: ${error.message || error}: email: ${myEmail}` });
+      } else {
+        resolve({ message: 'Email sent successfully.' });
+      }
     });
+  });
 }
 
 app.get('/', (req, res) => {

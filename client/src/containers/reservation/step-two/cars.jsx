@@ -22,9 +22,7 @@ export const Cars = memo(() => {
   const onSelectCar = async (car) => {
     try {
       setIsLoadingId(car.id);
-      const apiBaseUrl = import.meta.env.MODE === 'development'
-        ? `${import.meta.env.VITE_API_BASE_URL_DEV}:${import.meta.env.VITE_NODE_PORT}/`
-        : import.meta.env.VITE_API_BASE_URL_PROD;
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL_PROD;
       const response = await fetch(`${apiBaseUrl}send-email`, {
         method: 'POST',
         headers: {
