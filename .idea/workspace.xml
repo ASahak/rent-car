@@ -6,19 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8e41f7bb-d925-4c80-9754-0e8e79d5240e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/car_hero_luxury.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/car_hero_luxury.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/hero-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/reserve_car.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/reserve_car.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/reserve_car2.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/reserve_car2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/reserve_car3.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/reserve_car3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/footer/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/reservation-form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/reservation-form/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/home/reservation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/home/reservation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/reservation/info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/reservation/info.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/home/hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/home/hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/home/how-it-works.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/home/how-it-works.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/reservation/step-two/cars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/reservation/step-two/cars.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/arthu/Desktop/ASahak/Important/experienceProjects/rent-car",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\arthu\Desktop\ASahak\Important\experienceProjects\rent-car\server" />
@@ -93,7 +92,9 @@
       <workItem from="1715884925292" duration="914000" />
       <workItem from="1716022717233" duration="232000" />
       <workItem from="1716023906763" duration="9000" />
-      <workItem from="1716223021643" duration="2963000" />
+      <workItem from="1716223021643" duration="4366000" />
+      <workItem from="1716396977592" duration="5219000" />
+      <workItem from="1717242459761" duration="3277000" />
     </task>
     <servers />
   </component>

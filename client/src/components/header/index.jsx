@@ -21,7 +21,7 @@ export const Header = memo(() => {
       <Flex justifyContent="space-between" alignItems="center">
         <Flex gap="10vw">
           <NavLink to={RoutePaths.HOME}>
-            <Image w="8rem" src="/logo.png" alt="Logo"/>
+            <Image h="6rem" src="/logo.png" alt="Logo"/>
           </NavLink>
           <List display={{ sm: 'flex', base: 'none' }} alignItems="center" gap="6rem">
             {NAV_LINKS.map(link => <ListItem

@@ -4,7 +4,7 @@ export const MAIN_CONTACT_NUMBERS = [
   '+18186675666',
   '+17026066662'
 ]
-export const MAIN_CONTACT_EMAIL = 'rentcar@gmail.com'
+export const MAIN_CONTACT_EMAIL = 'contact@signaturetransservices.com'
 export const MAIN_CONTACT_DOT_CART = 'https://dot.cards/user/uphorgtiipxuwponf3ll72iml/c/bl'
 export const MAIN_CONTACT_ADDRESS = {
   href: 'https://maps.app.goo.gl/mrWspNNneWWRTis86',

@@ -14,9 +14,9 @@ export const Hero = memo(() => {
         <Grid templateColumns={{ base: '1fr', sm: '1fr 1fr', md: '1fr 1.5fr' }} gap={16}>
           <GridItem pt="6rem" pb={{ base: '0rem', sm: '6rem' }}>
             <Heading w="fit-content" pb="3rem" mb={10} fontSize="6.4rem" color="white" fontWeight={600} lineHeight="6.4rem">
-              Find, book and
+              Find and book
               <br/>
-              rent a car <Text as="span" position="relative">
+              a ride <Text as="span" position="relative">
               Easly
               <Box
                 position="absolute"
@@ -28,7 +28,7 @@ export const Hero = memo(() => {
             </Text>
             </Heading>
             <Text fontSize="1.6rem" color="gray.220">Get a car wherever and whenever you need it</Text>
-            <Button variant="brand" px={16} mt="2.4rem" onClick={rentCar}>Rent a car</Button>
+            <Button variant="brand" px={16} mt="2.4rem" onClick={rentCar}>Book a ride</Button>
           </GridItem>
           <GridItem py="2rem" alignItems="center" display="flex">
             <Image

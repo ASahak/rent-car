@@ -125,7 +125,7 @@ export const Cars = memo(() => {
               color="black"
               fontWeight={500}
               onClick={() => onSelectCar(car)}
-            >Rent car</Button>
+            >Book a ride</Button>
           </Box>
         </VStack>
       </GridItem>

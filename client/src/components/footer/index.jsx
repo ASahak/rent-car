@@ -31,7 +31,7 @@ export const Footer = memo(() => {
       <Grid templateColumns={{ base: '1fr', sm: '1.5fr 2.5fr 2fr' }} gap={{ base: 6, sm: 12 }}>
         <GridItem gap={8} as={Flex} flexDir="column">
           <NavLink to={RoutePaths.HOME}>
-            <Image w="8rem" src="/logo.png" alt="Logo"/>
+            <Image h="5rem" src="/logo.png" alt="Logo"/>
           </NavLink>
           <Link
             href={MAIN_CONTACT_ADDRESS.href}
@@ -43,7 +43,11 @@ export const Footer = memo(() => {
             target="_blank"
           >
             <Icon as={RiMapPin2Line} fontSize="1.8rem" />
-            <Text as="span">{MAIN_CONTACT_ADDRESS.label}</Text>
+            <Text as="span">
+              DinaAnna LLC
+              <br />
+              {MAIN_CONTACT_ADDRESS.label}
+            </Text>
           </Link>
         </GridItem>
         <GridItem gap={4} as={Flex} flexDir="column" justifyContent="space-between">

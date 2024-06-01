@@ -47,7 +47,6 @@ export const ReservationForm = () => {
     }
   });
   useBeforeunload(isDirty ? (event) => event.preventDefault() : null);
-  console.log(isDirty);
   const onSubmit = (data) => {
     setData({
       details: data,

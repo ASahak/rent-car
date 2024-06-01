@@ -9,7 +9,7 @@ export const HowItWorks = memo(() => {
   return (
     <Container my="4rem" maxW='120rem' position='relative'>
       <Heading mb={10} textAlign="center" color="white" fontSize="3.2rem" fontWeight={600} lineHeight="3.5rem" fontFamily="Syne">
-        Rent with following 3 working steps
+        Book a ride with couple of steps
         <br/>
         <Text color="gray.220">How it works?</Text>
       </Heading>
@@ -21,9 +21,9 @@ export const HowItWorks = memo(() => {
               <Icon as={ReactLocationIcon} position="absolute" fontSize="3.2rem"/>
             </Box>
             <Text mt={6} textAlign="center" color="gray.220" fontSize="1.6rem">
-              Choose your and find
+              Choose your pick up and
               <br/>
-              your best car
+              drop off locations
             </Text>
           </Flex>
         </GridItem>
@@ -34,9 +34,9 @@ export const HowItWorks = memo(() => {
               <Icon as={ReactCalendarIcon} position="absolute" fontSize="3.2rem"/>
             </Box>
             <Text mt={6} textAlign="center" color="gray.220" fontSize="1.6rem">
-              Choose your and find
+              Choose the
               <br/>
-              your best car
+              date
             </Text>
           </Flex>
         </GridItem>
@@ -47,9 +47,9 @@ export const HowItWorks = memo(() => {
               <Icon as={ReactCarIcon} position="absolute" fontSize="3.2rem"/>
             </Box>
             <Text mt={6} textAlign="center" color="gray.220" fontSize="1.6rem">
-              Choose your and find
+              Choose the
               <br/>
-              your best car
+              car
             </Text>
           </Flex>
         </GridItem>
