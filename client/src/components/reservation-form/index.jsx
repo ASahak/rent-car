@@ -214,6 +214,7 @@ export const ReservationForm = () => {
             name="passengers"
             render={({ field }) => <NumberInput
               min={0}
+              name="passengers"
               max={MAX_PASSENGERS}
               clampValueOnBlur={false}
               value={field.value}
@@ -245,6 +246,7 @@ export const ReservationForm = () => {
             name="email"
             render={({ field }) => <Input
               variant="base"
+              name="email"
               placeholder="Your email"
               fontSize="1.4rem"
               value={field.value}

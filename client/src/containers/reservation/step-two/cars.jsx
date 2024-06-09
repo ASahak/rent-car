@@ -22,22 +22,32 @@ export const Cars = memo(() => {
   const onSelectCar = async (car) => {
     try {
       setIsLoadingId(car.id);
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL_PROD;
-      const response = await fetch(`${apiBaseUrl}send-email`, {
+      const response = await fetch(`https://graph.facebook.com/v19.0/${import.meta.env.VITE_WHATSAPP_BUSINESS_ACCOUNT_ID}/messages`, {
         method: 'POST',
         headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_WHATSAPP_TOKEN}`,
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          carModel: `(${car.year}) ${car.label}`,
-          serviceType: SERVICE_TYPES.find(e => e.value === data.details.serviceType).label,
-          pickUpDate: `${dayjs(data.details.pickUpDate).format('DD/MM/YYYY')} at ${dayjs(data.details.pickUpTime).format('h:mm A')}`,
-          pickUpLocation: data.details.pickUpLocation,
-          dropOffLocation: data.details.dropOffLocation,
-          passengers: data.details.passengers,
-          phone: `${findCountryCode(data.details.phone.country)} ${data.details.phone.number}`,
-          email: data.details.email,
+          messaging_product: 'whatsapp',
+          to: import.meta.env.VITE_WHATSAPP_NUMBER,
+          type: 'text',
+          text: {
+            body:
+`
+Customer reservation
+
+Car Model: (${car.year}) ${car.label}
+Service Type: ${SERVICE_TYPES.find(e => e.value === data.details.serviceType).label}
+Pickup Date: ${dayjs(data.details.pickUpDate).format('DD/MM/YYYY')} at ${dayjs(data.details.pickUpTime).format('h:mm A')}
+Pick Up Location: ${data.details.pickUpLocation}
+Drop off location: ${data.details.dropOffLocation}
+Passengers: ${data.details.passengers}
+Phone: ${findCountryCode(data.details.phone.country)} ${data.details.phone.number}
+Email: ${data.details.email}
+`
+          },
         })
       })
       const { error } = await response.json();
@@ -76,11 +86,11 @@ export const Cars = memo(() => {
           rounded="xl"
           borderColor={car.id === selected?.id ? 'brand.500' : '#a4a3a3'}
           _hover={{
-            borderColor: "brand.500"
+            borderColor: 'brand.500'
           }}
         >
           <Box textAlign="center">
-            <Image src={car.img} w="29rem" h="15rem" />
+            <Image src={car.img} w="29rem" h="15rem"/>
           </Box>
           <Box w="full" overflow="hidden">
             <Heading justifyContent="start" color="white" fontSize="2rem" isTruncated>({car.year}) {car.label}</Heading>
@@ -88,31 +98,35 @@ export const Cars = memo(() => {
           <Box w="full">
             <Flex justifyContent="space-between" flexWrap="wrap" gap=".6rem">
               <VStack spacing=".6rem" alignItems="start">
-                <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220" fontSize="1.4rem">
-                  <ReactAccountIcon />
+                <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220"
+                      fontSize="1.4rem">
+                  <ReactAccountIcon/>
                   <Text as="span">{car.passengers} Passengers</Text>
                 </Text>
                 {car.airConditioner
-                  ? <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220" fontSize="1.4rem">
-                    <ReactWinterIcon />
+                  ? <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220"
+                          fontSize="1.4rem">
+                    <ReactWinterIcon/>
                     <Text as="span">Air Conditioning</Text>
                   </Text>
-                  : <Text />
+                  : <Text/>
                 }
               </VStack>
               <VStack spacing=".6rem" alignItems="start">
-                <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220" fontSize="1.4rem">
-                  <ReactTransferBoxIcon />
+                <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220"
+                      fontSize="1.4rem">
+                  <ReactTransferBoxIcon/>
                   <Text as="span">{car.transferBoxType}</Text>
                 </Text>
-                <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220" fontSize="1.4rem">
-                  <ReactDoorIcon />
+                <Text display="grid" gridTemplateColumns="18px 1fr" alignItems="center" gap={6} color="gray.220"
+                      fontSize="1.4rem">
+                  <ReactDoorIcon/>
                   <Text as="span">{car.doors} Doors</Text>
                 </Text>
               </VStack>
             </Flex>
           </Box>
-          <Divider />
+          <Divider/>
           <Box w="full">
             <Button
               isLoading={isLoadingId === car.id}

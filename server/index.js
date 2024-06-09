@@ -1,8 +1,6 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const { google } = require('googleapis');
 dotenv.config();
 
 const app = express();
@@ -15,102 +13,80 @@ app.use((req, res, next) => {
   // res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
-const CLIENT_ID = process.env.GMAIL_CLIENT_ID;
-const CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET;
-const REFRESH_TOKEN = process.env.GMAIL_REFRESH_TOKEN;
-const REDIRECT_URI = process.env.GMAIL_REDIRECT_URI;
-const myEmail = process.env.SENDER_EMAIL;
+const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER;
+const TOKEN = process.env.GMAIL_CLIENT_SECRET;
 
-const oAuth2Client = new google.auth.OAuth2(
-  CLIENT_ID,
-  CLIENT_SECRET,
-  REDIRECT_URI
-);
-oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN })
 
-async function sendEmail(reservationDetails) {
-  const accessToken = await oAuth2Client.getAccessToken();
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      type: 'OAuth2',
-      user: myEmail,
-      clientId: CLIENT_ID,
-      clientSecret: CLIENT_SECRET,
-      refreshToken: REFRESH_TOKEN,
-      accessToken: accessToken
-    }
-  });
-  const mail_configs = {
-    from: reservationDetails.email,
-    to: myEmail,
-    subject: 'STS Reservation',
-    html:
-      `<table>
-      <tr>
-        <td>
-          <p>Customer reservation</p>
-          <table>
-            <tr>
-              <td><strong>Car Model:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.carModel}</td>
-            </tr>
-            <tr>
-              <td><strong>Service Type:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.serviceType}</td>
-            </tr>
-            <tr>
-              <td><strong>Pickup Date:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.pickUpDate}</td>
-            </tr>
-            <tr>
-              <td><strong>Pick Up Location:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.pickUpLocation}</td>
-            </tr>
-            <tr>
-              <td><strong>Drop off location:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.dropOffLocation}</td>
-            </tr>
-            <tr>
-              <td><strong>Passengers:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.passengers}</td>
-            </tr>
-            <tr>
-              <td><strong>Email:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.email}</td>
-            </tr>
-            <tr>
-              <td><strong>Phone:</strong></td>
-              <td style="padding-left: 10px">${reservationDetails.phone}</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-<!-- partial -->
-  
-</body>
-</html>`,
-  };
-  return new Promise((resolve, reject) => {
-    transporter.sendMail(mail_configs, (error) => {
-      if (error) {
-        console.error(error);
-        reject({ message: `An error has occurred. Please try again, due to: ${error.message || error}: email: ${myEmail}` });
-      } else {
-        resolve({ message: 'Email sent successfully.' });
-      }
-    });
-  });
+async function sendMessage(reservationDetails) {
+//   const mail_configs = {
+//     from: reservationDetails.email,
+//     to: myEmail,
+//     subject: 'STS Reservation',
+//     html:
+//       `<table>
+//       <tr>
+//         <td>
+//           <p>Customer reservation</p>
+//           <table>
+//             <tr>
+//               <td><strong>Car Model:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.carModel}</td>
+//             </tr>
+//             <tr>
+//               <td><strong>Service Type:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.serviceType}</td>
+//             </tr>
+//             <tr>
+//               <td><strong>Pickup Date:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.pickUpDate}</td>
+//             </tr>
+//             <tr>
+//               <td><strong>Pick Up Location:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.pickUpLocation}</td>
+//             </tr>
+//             <tr>
+//               <td><strong>Drop off location:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.dropOffLocation}</td>
+//             </tr>
+//             <tr>
+//               <td><strong>Passengers:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.passengers}</td>
+//             </tr>
+//             <tr>
+//               <td><strong>Email:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.email}</td>
+//             </tr>
+//             <tr>
+//               <td><strong>Phone:</strong></td>
+//               <td style="padding-left: 10px">${reservationDetails.phone}</td>
+//             </tr>
+//           </table>
+//         </td>
+//       </tr>
+//     </table>
+// <!-- partial -->
+//
+// </body>
+// </html>`,
+//   };
+//   return new Promise((resolve, reject) => {
+//     transporter.sendMail(mail_configs, (error) => {
+//       if (error) {
+//         console.error(error);
+//         reject({ message: `An error has occurred. Please try again, due to: ${error.message || error}: email: ${myEmail}` });
+//       } else {
+//         resolve({ message: 'Email sent successfully.' });
+//       }
+//     });
+//   });
 }
 
 app.get('/', (req, res) => {
   return res.send('Server is running!')
 });
 
-app.post('/send-email', (req, res) => {
-  sendEmail(req.body)
+app.post('/send-message', (req, res) => {
+  sendMessage(req.body)
     .then(() => res.status(200).send({ success: true }))
     .catch((error) => res.status(500).send({ error: error.message }));
 });
