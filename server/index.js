@@ -1,6 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
+const cron = require('node-cron');
+
 dotenv.config();
 
 const app = express();
@@ -10,75 +15,63 @@ const isProd = process.env.NODE_ENV === 'production';
 app.use(cors());
 app.use(express.json());
 app.use((req, res, next) => {
-  // res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
-const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER;
-const TOKEN = process.env.GMAIL_CLIENT_SECRET;
 
+cron.schedule('* * * * *', async() => {
+  try {
+    await storeNewToken()
+    console.log('Token was updated successfully.')
+  } catch (err) {
+    console.error(`Cron Error: ${err.message || error}`)
+  }
+});
+
+const envFilePath = path.resolve(__dirname, '.env');
+const storeNewToken = async () => {
+  try {
+    const response = await axios.post(`https://graph.facebook.com/v19.0/oauth/access_token?grant_type=fb_exchange_token&client_id=${process.env.WHATSAPP_CLIENT_ID}&client_secret=${process.env.WHATSAPP_CLIENT_SECRET}&fb_exchange_token=${process.env.WHATSAPP_TOKEN}`)
+
+    const envFileContent = fs.readFileSync(envFilePath, 'utf-8');
+    const updatedEnvFileContent = envFileContent.replace(/WHATSAPP_TOKEN=.*/, `WHATSAPP_TOKEN=${response.data.access_token}`);
+    fs.writeFileSync(envFilePath, updatedEnvFileContent);
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 async function sendMessage(reservationDetails) {
-//   const mail_configs = {
-//     from: reservationDetails.email,
-//     to: myEmail,
-//     subject: 'STS Reservation',
-//     html:
-//       `<table>
-//       <tr>
-//         <td>
-//           <p>Customer reservation</p>
-//           <table>
-//             <tr>
-//               <td><strong>Car Model:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.carModel}</td>
-//             </tr>
-//             <tr>
-//               <td><strong>Service Type:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.serviceType}</td>
-//             </tr>
-//             <tr>
-//               <td><strong>Pickup Date:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.pickUpDate}</td>
-//             </tr>
-//             <tr>
-//               <td><strong>Pick Up Location:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.pickUpLocation}</td>
-//             </tr>
-//             <tr>
-//               <td><strong>Drop off location:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.dropOffLocation}</td>
-//             </tr>
-//             <tr>
-//               <td><strong>Passengers:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.passengers}</td>
-//             </tr>
-//             <tr>
-//               <td><strong>Email:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.email}</td>
-//             </tr>
-//             <tr>
-//               <td><strong>Phone:</strong></td>
-//               <td style="padding-left: 10px">${reservationDetails.phone}</td>
-//             </tr>
-//           </table>
-//         </td>
-//       </tr>
-//     </table>
-// <!-- partial -->
-//
-// </body>
-// </html>`,
-//   };
-//   return new Promise((resolve, reject) => {
-//     transporter.sendMail(mail_configs, (error) => {
-//       if (error) {
-//         console.error(error);
-//         reject({ message: `An error has occurred. Please try again, due to: ${error.message || error}: email: ${myEmail}` });
-//       } else {
-//         resolve({ message: 'Email sent successfully.' });
-//       }
-//     });
-//   });
+  try {
+    return await axios.post(`https://graph.facebook.com/v19.0/${process.env.WHATSAPP_BUSINESS_ACCOUNT_ID}/messages`, {
+      messaging_product: 'whatsapp',
+      to: process.env.WHATSAPP_NUMBER,
+      type: 'text',
+      text: {
+        body:
+          `
+Customer reservation
+
+Car Model: ${reservationDetails.carModel}
+Service Type: ${reservationDetails.serviceType}
+Pickup Date: ${reservationDetails.pickUpDate}
+Pick Up Location: ${reservationDetails.pickUpLocation}
+Drop off location: ${reservationDetails.dropOffLocation}
+Passengers: ${reservationDetails.passengers}
+Phone: ${reservationDetails.phone}
+Email: ${reservationDetails.email}
+`
+      },
+    }, {
+      headers: {
+        'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+  } catch (error) {
+    throw Error({ message: `An error has occurred. Please try again, due to: ${error.message || error}` })
+  }
 }
 
 app.get('/', (req, res) => {
@@ -88,7 +81,7 @@ app.get('/', (req, res) => {
 app.post('/send-message', (req, res) => {
   sendMessage(req.body)
     .then(() => res.status(200).send({ success: true }))
-    .catch((error) => res.status(500).send({ error: error.message }));
+    .catch((error) => res.status(500).send({ error: error.message || error }));
 });
 
 app.listen(port, () => {
