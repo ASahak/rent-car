@@ -73,7 +73,7 @@ export const Footer = memo(() => {
               <Box />
               <Box as={Flex} flexDir="column" gap={6}>
                 <Heading fontSize="1.6rem" color="white" mb={0}>Follow Us</Heading>
-                <Link href={MAIN_CONTACT_DOT_CART} target="_blank" display="flex" fontSize="2rem" color="white">
+                <Link href={MAIN_CONTACT_DOT_CART} target="_blank" display="inline-flex" w="fit-content" fontSize="2rem" color="white">
                   <Icon as={RiBankCardLine} />
                 </Link>
               </Box>

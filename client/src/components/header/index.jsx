@@ -1,11 +1,21 @@
 import { memo, useEffect } from 'react';
-import { Flex, Image, Container, List, ListItem, Icon, useDisclosure, Button } from '@chakra-ui/react';
+import {
+  Flex,
+  Image,
+  Container,
+  List,
+  ListItem,
+  Icon,
+  useDisclosure,
+  Button,
+} from '@chakra-ui/react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri';
 import RoutePaths from '@/constants/route-paths';
 import { MAIN_CONTACT_NUMBERS, NAV_LINKS } from '@/constants/global';
 import { useMakeFixedBody } from '@/hooks';
 import { Phone } from '@/components';
+import { PaymentDropdown } from './payment-dropdown';
 
 export const Header = memo(() => {
   const { isOpen, onClose, onToggle } = useDisclosure();
@@ -36,6 +46,13 @@ export const Header = memo(() => {
                 {link.label}
               </NavLink>
             </ListItem>)}
+            <ListItem
+              color="white"
+              fontSize="1.4rem"
+              fontWeight="600"
+            >
+              <PaymentDropdown />
+            </ListItem>
           </List>
         </Flex>
         <Flex gap={8}>
@@ -72,14 +89,22 @@ export const Header = memo(() => {
       visibility={isOpen ? 'visible' : 'hidden'}
       justifyContent="space-between"
     >
-      <List display={{ sm: 'none', base: 'flex' }} flexDir="column" gap="4rem">
-        {NAV_LINKS.map(link => <ListItem key={link.path} color="white" fontSize="1.6rem" fontWeight="600">
+      <List display={{ sm: 'none', base: 'flex' }} flexDir="column" gap="3rem">
+        {NAV_LINKS.map(link => <ListItem py={4} key={link.path} color="white" fontSize="1.6rem" fontWeight="600">
           <NavLink
             to={link.path}
             style={({ isActive }) => ({ color: isActive ? 'var(--chakra-colors-brand-500)' : 'white'})}>
             {link.label}
           </NavLink>
         </ListItem>)}
+        <ListItem
+          py={4}
+          color="white"
+          fontSize="1.6rem"
+          fontWeight="600"
+        >
+          <PaymentDropdown isMobile />
+        </ListItem>
       </List>
       <Phone number={MAIN_CONTACT_NUMBERS[0]} />
     </Flex>

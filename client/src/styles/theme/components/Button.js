@@ -21,7 +21,7 @@ export default defineStyleConfig({
     'dropdown-item': () => ({
       display: 'inline-block !important',
       minH: '3.4rem',
-      color: 'black',
+      color: 'black !important',
       fontWeight: '500',
       fontSize: '1.4rem',
       textAlign: 'left',
