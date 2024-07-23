@@ -1,5 +1,6 @@
 import RoutePaths from './route-paths';
 import { RiPhoneFill, RiEarthFill } from 'react-icons/ri';
+import Zelle from '@/assets/images/zelle.jpg'
 
 export const MAIN_CONTACT_NUMBERS = [
   '+18186675666',
@@ -77,6 +78,6 @@ export const MAX_PASSENGERS = Math.max(...CARS.map(c => c.passengers));
 
 export const PAYMENTS = [
   { value: 'https://venmo.com/u/STS-1', label: 'Venmo', icon: RiEarthFill, type: 'link' },
-  { value: '+1(702)606-6662', label: 'Zelle', icon: RiPhoneFill, type: 'phone' },
-  { value: '+1(702)606-6662', label: 'Cash App', icon: RiPhoneFill, type: 'phone' },
+  { value: Zelle, label: 'Zelle', icon: RiEarthFill, type: 'link' },
+  { value: 'https://cash.app/$Gareginsedrakyan', label: 'Cash App', icon: RiEarthFill, type: 'link' },
 ]
