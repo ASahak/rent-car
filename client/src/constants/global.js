@@ -1,5 +1,5 @@
 import RoutePaths from './route-paths';
-import { RiPhoneFill, RiEarthFill } from 'react-icons/ri';
+import { RiEarthFill } from 'react-icons/ri';
 import Zelle from '@/assets/images/zelle.jpg'
 
 export const MAIN_CONTACT_NUMBERS = [
