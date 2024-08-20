@@ -28,27 +28,27 @@ app.use((req, res, next) => {
 
 // this functionality has no longer needed, but we are keeping it for no any reason :)))))
 
-cron.schedule('0 0 * * *', async() => {
-  try {
-    await storeNewToken()
-    console.log('Token was updated successfully.')
-  } catch (err) {
-    console.error(`Cron Error: ${err.message || error}`)
-  }
-});
-
-const envFilePath = path.resolve(__dirname, '.env');
-const storeNewToken = async () => {
-  try {
-    const response = await axios.post(`https://graph.facebook.com/v19.0/oauth/access_token?grant_type=fb_exchange_token&client_id=${process.env.WHATSAPP_CLIENT_ID}&client_secret=${process.env.WHATSAPP_CLIENT_SECRET}&fb_exchange_token=${process.env.WHATSAPP_TOKEN}`)
-
-    const envFileContent = fs.readFileSync(envFilePath, 'utf-8');
-    const updatedEnvFileContent = envFileContent.replace(/WHATSAPP_TOKEN=.*/, `WHATSAPP_TOKEN=${response.data.access_token}`);
-    fs.writeFileSync(envFilePath, updatedEnvFileContent);
-  } catch (err) {
-    console.error(err);
-  }
-}
+// cron.schedule('0 0 * * *', async() => {
+//   try {
+//     await storeNewToken()
+//     console.log('Token was updated successfully.')
+//   } catch (err) {
+//     console.error(`Cron Error: ${err.message || error}`)
+//   }
+// });
+//
+// const envFilePath = path.resolve(__dirname, '.env');
+// const storeNewToken = async () => {
+//   try {
+//     const response = await axios.post(`https://graph.facebook.com/v19.0/oauth/access_token?grant_type=fb_exchange_token&client_id=${process.env.WHATSAPP_CLIENT_ID}&client_secret=${process.env.WHATSAPP_CLIENT_SECRET}&fb_exchange_token=${process.env.WHATSAPP_TOKEN}`)
+//
+//     const envFileContent = fs.readFileSync(envFilePath, 'utf-8');
+//     const updatedEnvFileContent = envFileContent.replace(/WHATSAPP_TOKEN=.*/, `WHATSAPP_TOKEN=${response.data.access_token}`);
+//     fs.writeFileSync(envFilePath, updatedEnvFileContent);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
 
 // -------
 
