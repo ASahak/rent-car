@@ -1,10 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
-const cron = require('node-cron');
 const twilio = require('twilio');
 
 dotenv.config();
