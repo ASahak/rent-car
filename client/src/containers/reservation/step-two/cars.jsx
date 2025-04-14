@@ -65,7 +65,7 @@ export const Cars = memo(() => {
     }
   }
 
-  return (<Grid templateColumns={{ base: '1fr', md: '1fr 1fr 1fr' }} gap={{ base: '4rem', md: '6rem' }}>
+  return (<Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={{ base: '4rem', md: '6rem' }}>
     {CARS.map((car) => (
       <GridItem key={car.id} overflow="hidden">
         <VStack
@@ -78,11 +78,8 @@ export const Cars = memo(() => {
             borderColor: 'brand.500'
           }}
         >
-          <Box textAlign="center">
-            <Image src={car.img} w="29rem" h="15rem"/>
-          </Box>
           <Box w="full" overflow="hidden">
-            <Heading justifyContent="start" color="white" fontSize="2rem" isTruncated>({car.year}) {car.label}</Heading>
+            <Heading justifyContent="start" color="white" fontSize="2rem" isTruncated>{car.label}</Heading>
           </Box>
           <Box w="full">
             <Flex justifyContent="space-between" flexWrap="wrap" gap=".6rem">

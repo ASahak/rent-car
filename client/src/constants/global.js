@@ -29,55 +29,24 @@ export const SERVICE_TYPES = [
 export const CARS = [
   {
     id: 1,
-    label: 'BMW 7 Series',
-    year: 2022,
+    label: 'Sedan',
     doors: 4,
     passengers: 4,
     transferBoxType: 'Auto',
     airConditioner: true,
-    img: '/cars/bmw_7_2022.png',
   }, {
     id: 2,
-    label: 'BMW 5 series',
-    year: 2024,
-    doors: 4,
-    passengers: 4,
-    transferBoxType: 'Auto',
-    airConditioner: true,
-    img: '/cars/bmw_5_2024.png',
-  }, {
-    id: 3,
-    label: 'Chevrolet Suburban',
-    year: 2024,
+    label: 'SUV',
     doors: 4,
     passengers: 6,
     transferBoxType: 'Auto',
     airConditioner: true,
-    img: '/cars/chevrolet_2024.png',
-  }, {
-    id: 4,
-    label: 'Chevrolet Suburban',
-    year: 2020,
-    doors: 4,
-    passengers: 6,
-    transferBoxType: 'Auto',
-    airConditioner: true,
-    img: '/cars/chevrolet_2020.png',
-  }, {
-    id: 5,
-    label: 'Cadillac Escalade ESV platinum package',
-    year: 2020,
-    doors: 4,
-    passengers: 6,
-    transferBoxType: 'Auto',
-    airConditioner: true,
-    img: '/cars/cadillac_2020.png',
   }
 ]
 export const MAX_PASSENGERS = Math.max(...CARS.map(c => c.passengers));
 
 export const PAYMENTS = [
-  { value: 'https://venmo.com/u/STS-1', label: 'Venmo', icon: RiEarthFill, type: 'link' },
+  { value: 'https://www.venmo.com/u/signaturetrans', label: 'Venmo', icon: RiEarthFill, type: 'link' },
   { value: Zelle, label: 'Zelle', icon: RiEarthFill, type: 'link' },
   { value: 'https://cash.app/$Gareginsedrakyan', label: 'Cash App', icon: RiEarthFill, type: 'link' },
 ]
