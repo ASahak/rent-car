@@ -1,7 +1,7 @@
 import { memo, useContext, useState } from 'react';
 import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
-import { Box, Grid, GridItem, VStack, Image, Heading, Flex, Text, Divider, Button, useToast } from '@chakra-ui/react';
+import { Box, Grid, GridItem, VStack, Image, Heading, Flex, Text, Divider, Button } from '@chakra-ui/react';
 import { CARS, SERVICE_TYPES } from '@/constants/global';
 import ReactAccountIcon from '@/assets/icons/account.svg?react';
 import ReactWinterIcon from '@/assets/icons/winter.svg?react';
@@ -78,6 +78,9 @@ export const Cars = memo(() => {
             borderColor: 'brand.500'
           }}
         >
+          <Box textAlign="center">
+            <Image src={car.img} w="29rem" h="15rem"/>
+          </Box>
           <Box w="full" overflow="hidden">
             <Heading justifyContent="start" color="white" fontSize="2rem" isTruncated>{car.label}</Heading>
           </Box>

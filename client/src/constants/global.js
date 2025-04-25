@@ -34,6 +34,7 @@ export const CARS = [
     passengers: 4,
     transferBoxType: 'Auto',
     airConditioner: true,
+    img: '/cars/bmw_7_2022.png',
   }, {
     id: 2,
     label: 'SUV',
@@ -41,6 +42,7 @@ export const CARS = [
     passengers: 6,
     transferBoxType: 'Auto',
     airConditioner: true,
+    img: '/cars/chevrolet_2025.png',
   }
 ]
 export const MAX_PASSENGERS = Math.max(...CARS.map(c => c.passengers));
